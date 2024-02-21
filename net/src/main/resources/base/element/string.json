@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "NetAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "NetAbility_label",
+      "value": "label"
+    }
+  ]
+}

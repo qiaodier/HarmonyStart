@@ -1,0 +1,12 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/ToDoList",
+    "pages/Login",
+    "pages/ListPage",
+    "pages/GridPage",
+    "pages/TabPage",
+    "pages/AnimationPage",
+    "pages/WebPage"
+  ]
+}
