@@ -1,5 +1,5 @@
-export class BaseResp<T>{
-  code:string;
-  msg:string;
-  data:T
+export class BaseResp<T> {
+  code: string;
+  msg: string;
+  data: T
 }

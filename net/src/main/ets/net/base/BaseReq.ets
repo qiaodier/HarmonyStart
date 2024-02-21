@@ -1,3 +1,2 @@
-export class BaseReq{
-
+export class BaseReq {
 }
