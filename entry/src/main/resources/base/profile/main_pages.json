@@ -7,6 +7,7 @@
     "pages/GridPage",
     "pages/TabPage",
     "pages/AnimationPage",
-    "pages/WebPage"
+    "pages/WebPage",
+    "pages/demo/CartDemo"
   ]
 }
