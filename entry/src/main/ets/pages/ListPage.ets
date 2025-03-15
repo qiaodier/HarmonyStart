@@ -6,11 +6,11 @@
 struct ListPage {
   @State message: string = 'Hello World'
   settingListData: Array<ItemData> = [
-  new ItemData($r("app.string.app_news"), $r("app.media.icon"), null),
-  new ItemData($r("app.string.app_setting"), $r("app.media.icon"), null),
-  new ItemData($r("app.string.app_server"), $r("app.media.icon"), null),
-  new ItemData($r("app.string.app_server"), $r("app.media.icon"), null),
-  new ItemData($r("app.string.app_server"), $r("app.media.icon"), null),
+  new ItemData($r("app.string.app_news"), $r("app.media.icon")),
+  new ItemData($r("app.string.app_setting"), $r("app.media.icon")),
+  new ItemData($r("app.string.app_server"), $r("app.media.icon")),
+  new ItemData($r("app.string.app_server"), $r("app.media.icon")),
+  new ItemData($r("app.string.app_server"), $r("app.media.icon")),
 ]
   build() {
       Column() {
@@ -19,7 +19,7 @@ struct ListPage {
             ListItem(){
               this.settingCell(item)
             }.margin({top:5,bottom:5}).backgroundColor(Color.Red).borderRadius(12).padding({left:10,right:10,top:10,bottom:10})
-          },item => JSON.stringify(item))
+          },(item:ItemData) => JSON.stringify(item))
         }
         .margin({left:20,right:20,top:30})
         .borderRadius(20)

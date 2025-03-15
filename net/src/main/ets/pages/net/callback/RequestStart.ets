@@ -8,8 +8,8 @@ import { JsonHttpRequest } from './json/JsonHttpRequest';
 
 export class RequestStart {
   static sendRequest<T, M>(url: string, requestParams: T, iDataListener: IDataListener<M>) {
-    let iHttpRequest: IHttpRequest = new JsonHttpRequest();
     let iHttpListener: IHttpListener = new JsonHttpListener<M>(iDataListener)
+    let iHttpRequest: IHttpRequest = new JsonHttpRequest(url,JSON.stringify(requestParams),iHttpListener);
     let httpTask: HttpTask<T> = new HttpTask(url, requestParams, iHttpRequest, iHttpListener);
     httpTask.run()
   }

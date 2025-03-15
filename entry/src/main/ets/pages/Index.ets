@@ -4,9 +4,9 @@ import router from '@ohos.router'
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World'
+  @State message: string = 'Hello World111'
   build() {
-    Row() {
+    // Row() {
       Column() {
         Text(this.message)
           .fontSize(30)
@@ -24,8 +24,9 @@ struct Index {
           })
       }
       .width('100%')
-    }
-    .height('100%')
+      .alignItems(HorizontalAlign.Center)
+    // }
+    // .height('100%')
   }
 }
 

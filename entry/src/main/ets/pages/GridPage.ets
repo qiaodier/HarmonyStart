@@ -4,16 +4,16 @@ import ItemData from './ListPage'
 struct GridPage {
   @State message: string = 'Hello World'
 gridData:Array<ItemData> = [
-  new ItemData("我的最爱", $r("app.media.icon"), null),
-  new ItemData("历史记录", $r("app.media.icon"), null),
-  new ItemData("消息", $r("app.media.icon"), null),
-  new ItemData("购物车", $r("app.media.icon"), null),
-  new ItemData("我的目标", $r("app.media.icon"), null),
-  new ItemData("圈子", $r("app.media.icon"), null),
-  new ItemData("收藏", $r("app.media.icon"), null),
-  new ItemData("回收站", $r("app.media.icon"), null),
-  new ItemData("回收站1", $r("app.media.icon"), null),
-  new ItemData("回收站2", $r("app.media.icon"), null),
+  new ItemData("我的最爱", $r("app.media.icon")),
+  new ItemData("历史记录", $r("app.media.icon")),
+  new ItemData("消息", $r("app.media.icon")),
+  new ItemData("购物车", $r("app.media.icon")),
+  new ItemData("我的目标", $r("app.media.icon")),
+  new ItemData("圈子", $r("app.media.icon")),
+  new ItemData("收藏", $r("app.media.icon")),
+  new ItemData("回收站", $r("app.media.icon")),
+  new ItemData("回收站1", $r("app.media.icon")),
+  new ItemData("回收站2", $r("app.media.icon")),
 ]
   build() {
       Column() {
@@ -25,7 +25,7 @@ gridData:Array<ItemData> = [
                 Text(item.title+"")
               }
             }
-          },item => JSON.stringify(item))
+          },(item:ItemData) => JSON.stringify(item))
         }.columnsTemplate("1fr 1fr 1fr 1fr")//4列
         // .rowsTemplate("1fr 1fr") //两行
         .rowsGap(12)//行间距

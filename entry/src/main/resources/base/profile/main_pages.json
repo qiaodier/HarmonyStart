@@ -8,6 +8,7 @@
     "pages/TabPage",
     "pages/AnimationPage",
     "pages/WebPage",
-    "pages/demo/CartDemo"
+    "pages/demo/CartDemo",
+    "pages/canvas/Canvas"
   ]
 }

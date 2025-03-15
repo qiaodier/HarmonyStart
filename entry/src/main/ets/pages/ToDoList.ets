@@ -1,7 +1,9 @@
 import font from '@ohos.font'
 import router from '@ohos.router'
 //能取到
-let params = router.getParams()?.['src'] as String
+// let params = router.getParams()?.['src'] as string
+
+let params = JSON.parse(JSON.stringify(router.getParams())['src']) as string
 /**
  * 代办列表页面
  */
@@ -23,7 +25,7 @@ struct ToDoList {
         router.back()
       })
       Flex({ direction: FlexDirection.Column }) {
-        ForEach(this.dataList, (item) => {
+        ForEach(this.dataList, (item: string) => {
           ToDoItem({ content: item })
         })
       }
@@ -37,7 +39,7 @@ struct ToDoList {
 
 @Component
 struct ToDoItem {
-  private content: string;
+  private content: string = '';
   @State isComplete: boolean = false
 
   build() {

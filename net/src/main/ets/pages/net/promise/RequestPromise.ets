@@ -1,6 +1,7 @@
 import http from '@ohos.net.http';
 import { BaseResp } from '../base/BaseResp';
 
+
 export class RequestPromise {
   private static BASE_URL = 'https://your-api-url.com/';
 
@@ -39,7 +40,7 @@ export class RequestPromise {
           // // data.header为HTTP响应头，可根据业务需要进行解析
           // console.info('header:' + JSON.stringify(data.header));
           // console.info('cookies:' + JSON.stringify(data.cookies)); // 8+
-          let res = JSON.parse(data.result.toString());
+          let res:BaseResp<T> = JSON.parse(data.result.toString());
           resolve(res)
           // 当该请求使用完毕时，调用destroy方法主动销毁
           httpRequest.destroy();
@@ -58,11 +59,11 @@ export class RequestPromise {
 
 
   public static async sendGetRequest<T>(url: string): Promise<BaseResp<T>> {
-    return this.sendHttpRequest(url, http.RequestMethod.GET, '');
+    return RequestPromise.sendHttpRequest(url, http.RequestMethod.GET, '');
   }
 
 
   public static async sendPostJsonRequest<T>(url: string, body: string): Promise<BaseResp<T>> {
-    return this.sendHttpRequest(url, http.RequestMethod.POST, body);
+    return RequestPromise.sendHttpRequest(url, http.RequestMethod.POST, body);
   }
 }

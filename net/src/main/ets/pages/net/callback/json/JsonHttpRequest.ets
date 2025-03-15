@@ -6,7 +6,15 @@ import http from '@ohos.net.http'
 export class JsonHttpRequest implements IHttpRequest {
   private url: string = '';
   private params: string = '';
-  private iHttpListener: IHttpListener = null;
+  private iHttpListener: IHttpListener;
+
+
+  constructor(url: string, params: string, iHttpListener: IHttpListener) {
+    this.url = url;
+    this.params = params;
+    this.iHttpListener = iHttpListener;
+  }
+
 
   setListener(listener: IHttpListener): void {
     this.iHttpListener = listener
